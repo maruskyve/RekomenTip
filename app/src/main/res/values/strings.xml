@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RekomenTip</string>
+    <string name="d_url">https://github.com/maruskyve</string>
+    <string-array name="service_rating">
+        <item>1 - Very Strongly Agree Not Satisfy</item>
+        <item>2 - Strongly Agree Not Satisfy</item>
+        <item>3 - Agree Satisfy</item>
+        <item>4 - Little Agree Not Satisfy</item>
+        <item>5 - Enough</item>
+        <item>6 - Little Agree Satisfy</item>
+        <item>7 - Agree Satisfy</item>
+        <item>8 - Strongly Agree Satisfy</item>
+        <item>9 - Very Strongly Agree Not Satisfy</item>
+    </string-array>
+</resources>

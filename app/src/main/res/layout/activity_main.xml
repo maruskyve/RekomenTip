@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/ic_ornament_all">
+
+            <!-- Title and Top Background Ornament -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+<!--                <ImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/top_bar_ornament2"/>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="30dp"
+                        android:fontFamily="@font/productsans_bold"
+                        android:text="RekomenTip"
+                        android:textColor="#279270"
+                        android:textSize="40dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/productsans_regular"
+                        android:text="Mau kasih tip makan, jasa, atau yang lain?\nAyo cari tahu nominal yang pas :D"
+                        android:textColor="#313A42"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Output -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Output Detail -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="35dp"
+                    app:strokeColor="#3CC99D"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="20dp"
+                        android:paddingTop="40dp"
+                        android:paddingBottom="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/productsans_regular"
+                            android:gravity="center"
+                            android:text="Hasilnya bakal muncul di bawah, setelah kamu masukkan Input dan Hitung Sekarang"
+                            android:textColor="#313A42"
+                            android:textSize="16dp" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            app:cardCornerRadius="25dp">
+
+                            <TextView
+                                android:id="@+id/recommended_tip"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingHorizontal="20dp"
+                                android:paddingVertical="10dp"
+                                android:background="@drawable/gradient_green100_yellow06_flipped"
+                                android:fontFamily="@font/productsans_bold"
+                                android:text="Belum tersedia..."
+                                android:textColor="#1C624C"
+                                android:textSize="24dp" />
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Output span label -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    app:cardCornerRadius="25dp"
+                    app:strokeColor="#3CC99D"
+                    app:strokeWidth="1dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/productsans_bold"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:text="Hasil"
+                        android:textColor="#313A42"
+                        android:textSize="20dp" />
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+
+            <!-- Input -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <!-- Input Detail -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_centerInParent="true"
+                    app:cardCornerRadius="35dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="20dp"
+                        android:paddingTop="40dp"
+                        android:paddingBottom="20dp"
+                        android:background="@drawable/gradient_green100_yellow06">
+
+                        <!-- Input - Payment Nominal -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <!-- Input - Payment Nominal label -->
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/productsans_bold"
+                                android:gravity="center"
+                                android:text="Nominal Pembayaran"
+                                android:textColor="#067D58"
+                                android:textSize="20dp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="25dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingVertical="10dp"
+                                    android:paddingHorizontal="20dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/productsans_bold"
+                                        android:text="Rp."
+                                        android:textSize="24dp"
+                                        android:textColor="#626262"/>
+
+                                    <EditText android:id="@+id/payment_nominal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingLeft="5dp"
+                                        android:background="@null"
+                                        android:fontFamily="@font/productsans_bold"
+                                        android:text="1300000"
+                                        android:textSize="24dp"
+                                        android:textColor="#626262"/>
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Payment Nominal input helper text -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/productsans_regular"
+                                android:text="Isi berapa nominal yang kamu bayarkan :D"
+                                android:textColor="#1C624C"/>
+                        </LinearLayout>
+
+                        <!-- Input - Service Rating -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="40dp">
+
+                            <!-- Input - Service Rating label -->
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/productsans_bold"
+                                android:gravity="center"
+                                android:text="Rating Pelayanan"
+                                android:textColor="#067D58"
+                                android:textSize="20dp" />
+
+                            <!-- Spinner type -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="20dp">
+
+                                <Spinner android:id="@+id/service_rating"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingHorizontal="20dp"
+                                    android:paddingVertical="10dp"/>
+
+<!--                                <EditText android:id="@+id/srating"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:paddingHorizontal="20dp"-->
+<!--                                    android:paddingVertical="10dp"-->
+<!--                                    android:background="@null"-->
+<!--                                    android:fontFamily="@font/productsans_bold"-->
+<!--                                    android:text="1"-->
+<!--                                    android:textColor="#1C624C"-->
+<!--                                    android:textSize="24dp" />-->
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Service Rating input helper text-->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/productsans_regular"
+                                android:text="Pilih rating pelayanan berdasarkan kepuasan yang kamu dapatkan :D"
+                                android:textColor="#1C624C"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Input span label -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    app:cardCornerRadius="25dp"
+                    app:strokeColor="#3CC99D"
+                    app:strokeWidth="1dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/productsans_bold"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:text="Input"
+                        android:textColor="#313A42"
+                        android:textSize="20dp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Compute Now button (key) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/commit_build_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="330dp"
+                    app:cardBackgroundColor="#13BB86"
+                    app:cardCornerRadius="25dp"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:fontFamily="@font/productsans_bold"
+                        android:text="Hitung Sekarang"
+                        android:textSize="20dp"
+                        android:textColor="@color/white"/>
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+
+            <!-- Footer - Copyright -->
+            <TextView android:id="@+id/commit_copyright"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="75dp"
+                android:fontFamily="@font/productsans_regular"
+                android:text="©maruskyve 2022"
+                android:textColor="#818181"
+                android:clickable="true"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
