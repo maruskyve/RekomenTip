@@ -7,7 +7,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.core.widget.NestedScrollView
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.core.widget.NestedScrollView android:id="@+id/main_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -21,11 +25,6 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-<!--                <ImageView-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:src="@drawable/top_bar_ornament2"/>-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -173,15 +172,17 @@
                                 android:layout_marginTop="10dp"
                                 app:cardCornerRadius="25dp">
 
-                                <LinearLayout
+                                <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:paddingVertical="10dp"
                                     android:paddingHorizontal="20dp">
 
-                                    <TextView
+                                    <TextView android:id="@+id/payment_nominal_currency"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerVertical="true"
                                         android:fontFamily="@font/productsans_bold"
                                         android:text="Rp."
                                         android:textSize="24dp"
@@ -190,14 +191,29 @@
                                     <EditText android:id="@+id/payment_nominal"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@id/payment_nominal_currency"
+                                        android:layout_centerVertical="true"
                                         android:layout_gravity="center"
                                         android:paddingLeft="5dp"
+                                        android:inputType="number"
                                         android:background="@null"
                                         android:fontFamily="@font/productsans_bold"
-                                        android:text="1300000"
+                                        android:text="0"
                                         android:textSize="24dp"
                                         android:textColor="#626262"/>
-                                </LinearLayout>
+
+                                    <ImageButton android:id="@+id/payment_nominal_erase"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/ic_baseline_delete_24"
+                                        android:background="@color/white"
+                                        app:tint="#129F73"
+                                        android:clickable="true"
+                                        android:focusable="true" />
+
+                                </RelativeLayout>
                             </com.google.android.material.card.MaterialCardView>
 
                             <!-- Payment Nominal input helper text -->
@@ -311,9 +327,9 @@
 
             <!-- Footer - Copyright -->
             <TextView android:id="@+id/commit_copyright"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_marginTop="75dp"
                 android:fontFamily="@font/productsans_regular"
                 android:text="©maruskyve 2022"
@@ -322,4 +338,14 @@
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+        <ImageButton android:id="@+id/commit_instant_scroller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+            android:background="@null"/>
+    </RelativeLayout>
 </LinearLayout>

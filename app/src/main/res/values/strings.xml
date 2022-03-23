@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">RekomenTip</string>
-    <string name="d_url">https://github.com/maruskyve</string>
+    <string name="d_url">https://maruskyve.github.io/MaruskyveWebsite/</string>
     <string-array name="service_rating">
         <item>1 - Very Strongly Agree Not Satisfy</item>
         <item>2 - Strongly Agree Not Satisfy</item>

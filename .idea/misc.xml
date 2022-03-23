@@ -6,9 +6,11 @@
         <entry key="..\:/Users/MarufN/AndroidStudioProjects/RekomenTip/app/src/main/res/drawable-v24/gradient_green100_yellow06.xml" value="0.1" />
         <entry key="..\:/Users/MarufN/AndroidStudioProjects/RekomenTip/app/src/main/res/drawable/gradient.xml" value="0.1" />
         <entry key="..\:/Users/MarufN/AndroidStudioProjects/RekomenTip/app/src/main/res/drawable/gradient_green100_yellow06.xml" value="0.240625" />
+        <entry key="..\:/Users/MarufN/AndroidStudioProjects/RekomenTip/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.22" />
+        <entry key="..\:/Users/MarufN/AndroidStudioProjects/RekomenTip/app/src/main/res/drawable/ic_icon_rubbish.xml" value="0.240625" />
         <entry key="..\:/Users/MarufN/AndroidStudioProjects/RekomenTip/app/src/main/res/drawable/s.xml" value="0.1" />
         <entry key="..\:/Users/MarufN/AndroidStudioProjects/RekomenTip/app/src/main/res/font/font.xml" value="0.2546875" />
-        <entry key="..\:/Users/MarufN/AndroidStudioProjects/RekomenTip/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/MarufN/AndroidStudioProjects/RekomenTip/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/MarufN/AndroidStudioProjects/RekomenTip/app/src/main/res/layout/spinner_item_style.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/MarufN/AndroidStudioProjects/RekomenTip/app/src/main/res/mipmap-anydpi-v26/ornament_all.xml" value="0.240625" />
       </map>
@@ -19,12 +21,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.2" />
-      </ProjectState>
-    </option>
   </component>
 </project>
